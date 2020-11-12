@@ -1,1 +1,1 @@
-##Excercise on php-doctrine
+## Exercise on php-doctrine
