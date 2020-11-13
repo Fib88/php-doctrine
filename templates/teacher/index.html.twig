@@ -11,7 +11,10 @@
                 <th>Id</th>
                 <th>Name</th>
                 <th>Email</th>
-                <th>Address</th>
+                <th>Address.street</th>
+                <th>Address.streetNumber</th>
+                <th>Address.city</th>
+                <th>Address.zipcode</th>
                 <th>actions</th>
             </tr>
         </thead>
@@ -21,7 +24,10 @@
                 <td>{{ teacher.id }}</td>
                 <td>{{ teacher.name }}</td>
                 <td>{{ teacher.email }}</td>
-                <td>{{ teacher.address }}</td>
+                <td>{{ teacher.address.street }}</td>
+                <td>{{ teacher.address.streetNumber }}</td>
+                <td>{{ teacher.address.city }}</td>
+                <td>{{ teacher.address.zipcode }}</td>
                 <td>
                     <a href="{{ path('teacher_show', {'id': teacher.id}) }}">show</a>
                     <a href="{{ path('teacher_edit', {'id': teacher.id}) }}">edit</a>
@@ -29,7 +35,7 @@
             </tr>
         {% else %}
             <tr>
-                <td colspan="5">no records found</td>
+                <td colspan="8">no records found</td>
             </tr>
         {% endfor %}
         </tbody>
