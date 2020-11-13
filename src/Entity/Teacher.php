@@ -30,7 +30,7 @@ class Teacher
     private $email;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Embedded(class="Address")
      */
     private $address;
 
